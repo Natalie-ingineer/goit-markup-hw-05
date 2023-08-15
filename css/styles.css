@@ -794,6 +794,15 @@ h1 {
   line-height: 1.5;
   letter-spacing: 0.64px;
   margin-top: 40px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.subscribe-btn:hover,
+.subscribe-btn:focus {
+  background: var(--color-button-nav);
+  color: var(--primary-background);
 }
 
 /**
@@ -883,21 +892,28 @@ button {
 .order-form {
   width: 408px;
   margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 
-.wraper-form {
+.box-form {
   display: flex;
   flex-direction: column;
   gap: 8px;
-  align-items: center;
+  width: 360px;
+  height: 336px;
+}
+
+.wraper-form {
+  position: relative;
 }
 
 .label-username-form,
 .label-telephon-form,
 .label-acount-form,
 .label-feedback-form {
-  display: flex;
-  flex-direction: column;
   color: var(--border-customers);
   font-size: 12px;
   line-height: 1.7;
@@ -907,18 +923,36 @@ button {
 .username-form,
 .telephon-form,
 .acount-form {
+  border: none;
   width: 360px;
   height: 40px;
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
   padding-left: 38px;
+  outline: none;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.name-form,
+.tel-form,
+.email-form {
+  position: absolute;
+  top: 50%;
+  left: 12px;
+  transform: translateY(-50%);
+  cursor: pointer;
 }
 
 .feedback-form {
+  border: none;
   width: 360px;
-  height: 120px;
+
   border-radius: 4px;
   border: 1px solid rgba(46, 47, 66, 0.4);
+  outline: none;
+  padding-left: 16px;
 }
 
 .subtitle-form {
@@ -936,22 +970,16 @@ button {
   margin-bottom: 16px;
 }
 
-.name-form {
-  position: fixed;
-  top: 141px;
-  left: 40px;
+.order-form input:focus {
+  border: 1px solid var(--color-button);
 }
 
-.tel-form {
-  position: fixed;
-  top: 204px;
-  left: 40px;
+.order-form input:focus + svg {
+  fill: var(--color-button);
 }
 
-.email-form {
-  position: fixed;
-  top: 270px;
-  left: 40px;
+.order-form input:focus::placeholder {
+  color: var(--color-button);
 }
 
 .send-btn {
@@ -977,19 +1005,39 @@ button {
   letter-spacing: 0.64px;
   margin: 0 auto;
   margin-bottom: 24px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.label-checkbox-form {
+.send-btn:hover,
+.send-btn:focus {
+  background: var(--color-button-nav);
+  color: var(--primary-background);
+}
+
+/**
+  |============================
+  |    checkbox
+  |============================
+*/
+.checkbox-box {
   display: flex;
   gap: 8px;
-  align-items: baseline;
+  align-items: center;
   justify-content: center;
   padding-top: 16px;
   padding-bottom: 24px;
+  margin: 0 auto;
 }
 
 .checkbox-form {
   display: block;
+  width: 16px;
+  height: 16px;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .desk-accept {
@@ -999,4 +1047,18 @@ button {
   line-height: 1.17;
   letter-spacing: 0.48px;
   display: block;
+  transition-property: background-color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.privat-pol {
+  text-decoration: underline;
+  color: var(--color-button);
+}
+
+input:checked + label > span {
+  background-color: var(--color-button-nav);
+  border: none;
+  fill: var(--background-color-portfolio);
 }

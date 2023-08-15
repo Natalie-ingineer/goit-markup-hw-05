@@ -566,37 +566,55 @@
           <h4 class="subtitle-form">
             Leave your contacts and we will call you back
           </h4>
-          <label>
-            Name
-            <input type="text" name="username" required />
-            <svg class="name-form" width="18" height="18">
-              <use href="./images/icons.svg#icon-human"></use>
-            </svg>
-          </label>
-          <label>
-            Phone number
-            <input type="tel" name="contact_tel" required />
-            <svg class="tel-form" width="18" height="18">
-              <use href="./images/icons.svg#icon-call-phone"></use>
-            </svg>
-          </label>
-          <label>
-            Email
-            <input type="email" name="email" />
-            <svg class="email-form" width="18" height="18">
-              <use href="./images/icons.svg#icon-e-mail"></use>
-            </svg>
-          </label>
-          <label>
-            Comment
-            <textarea
-              name="feedback"
-              rows="5"
-              placeholder="Text input"
-            ></textarea>
-          </label>
-          <label>
-            <input type="checkbox" name="accept" value="accept" />
+          <div class="wraper-form">
+            <label class="label-username-form">
+              Name
+              <input
+                type="text"
+                class="username-form"
+                name="username"
+                required
+              />
+              <svg class="name-form" width="18" height="18">
+                <use href="./images/icons.svg#icon-human"></use>
+              </svg>
+            </label>
+            <label class="label-telephon-form">
+              Phone number
+              <input
+                type="tel"
+                class="telephon-form"
+                name="contact_tel"
+                required
+              />
+              <svg class="tel-form" width="18" height="24">
+                <use href="./images/icons.svg#icon-call-phone"></use>
+              </svg>
+            </label>
+            <label class="label-acount-form">
+              Email
+              <input type="email" class="acount-form" name="email" />
+              <svg class="email-form" width="18" height="24">
+                <use href="./images/icons.svg#icon-e-mail"></use>
+              </svg>
+            </label>
+            <label class="label-feedback-form">
+              Comment
+              <textarea
+                name="feedback"
+                class="feedback-form"
+                rows="5"
+                placeholder="Text input"
+              ></textarea>
+            </label>
+          </div>
+          <label class="label-checkbox-form">
+            <input
+              type="checkbox"
+              class="checkbox-form"
+              name="accept"
+              value="accept"
+            />
             <p class="desk-accept">
               I accept the terms and conditions of the Privacy Policy
             </p>

@@ -824,7 +824,7 @@ h1 {
   left: 50%;
   top: 50%;
   width: 408px;
-  min-height: 584px;
+
   transform: translate(-50%, -50%) scale(1);
   background: var(--modal-btn-background);
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.14), 0px 1px 3px rgba(0, 0, 0, 0.12),
@@ -881,16 +881,21 @@ button {
 }
 
 .order-form {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-
-  align-items: center;
+  width: 408px;
   margin: 0 auto;
 }
 
-.order-form label {
-  width: 100%;
+.wraper-form {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  align-items: center;
+}
+
+.label-username-form,
+.label-telephon-form,
+.label-acount-form,
+.label-feedback-form {
   display: flex;
   flex-direction: column;
   color: var(--border-customers);
@@ -899,10 +904,21 @@ button {
   letter-spacing: 0.48px;
 }
 
-.order-form input {
-  padding-left: 38px;
+.username-form,
+.telephon-form,
+.acount-form {
   width: 360px;
   height: 40px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
+  padding-left: 38px;
+}
+
+.feedback-form {
+  width: 360px;
+  height: 120px;
+  border-radius: 4px;
+  border: 1px solid rgba(46, 47, 66, 0.4);
 }
 
 .subtitle-form {
@@ -917,6 +933,7 @@ button {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.32px;
+  margin-bottom: 16px;
 }
 
 .name-form {
@@ -937,26 +954,20 @@ button {
   left: 40px;
 }
 
-.desk-accept {
-  display: block;
-}
-
-.order-form accept {
-  padding-left: 38px;
-}
-
 .send-btn {
-  max-width: 105px;
-  max-height: 24px;
+  width: 169px;
+  height: 56px;
   display: flex;
   padding: 16px 32px;
   align-items: center;
+  justify-content: center;
+  gap: 10px;
 
   border-radius: 4px;
-  background: var(--iris, #4d5ae5);
+  background: var(--color-button);
   box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.15);
 
-  color: var(--white, #fff);
+  color: var(--primary-background);
   text-align: center;
 
   font-size: 16px;
@@ -964,4 +975,28 @@ button {
   font-weight: 500;
   line-height: 1.5;
   letter-spacing: 0.64px;
+  margin: 0 auto;
+  margin-bottom: 24px;
+}
+
+.label-checkbox-form {
+  display: flex;
+  gap: 8px;
+  align-items: baseline;
+  justify-content: center;
+  padding-top: 16px;
+  padding-bottom: 24px;
+}
+
+.checkbox-form {
+  display: block;
+}
+
+.desk-accept {
+  width: 338px;
+  color: var(--border-customers);
+  font-size: 12px;
+  line-height: 1.17;
+  letter-spacing: 0.48px;
+  display: block;
 }

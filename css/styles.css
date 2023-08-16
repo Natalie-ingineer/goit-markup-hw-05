@@ -787,7 +787,7 @@ h1 {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 16px;
+
   margin: 0;
   cursor: pointer;
   border: none;
@@ -1041,7 +1041,7 @@ h1 {
 .checkbox-form {
   width: 16px;
   height: 16px;
-  transition-property: background-color;
+  transition-property: background-color, border-color;
   transition-duration: 250ms;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
@@ -1081,4 +1081,8 @@ input:checked + label > span {
 .checkbox-icon {
   max-width: 100%;
   fill: var(--primary-background);
+}
+
+.checkbox-icon:focus {
+  border-color: var(--color-button-nav);
 }
